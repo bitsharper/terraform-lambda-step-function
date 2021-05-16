@@ -1,0 +1,11 @@
+{
+    "Comment": "Step function to deregister AMI and delete related snapshot",
+    "StartAt":  "Deregister",
+    "States": {
+        "Deregister": {
+            "Type": "Task",
+            "Resource": "${ami-cleaner-lambda-arn}",
+            "End": true
+        }
+    }
+}
