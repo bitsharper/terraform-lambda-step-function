@@ -1,10 +1,10 @@
 data "archive_file" "zip" {
   type        = "zip"
-  source_dir  = "${path.module}/tmp/package-destribute"
+  source_dir  = "${path.module}/tmp/package-dependencies"
   output_path = "${path.module}/tmp/ami_cleaner.zip"
 
   depends_on = [
-    null_resource.install_destribute_python_dependencies
+    null_resource.install_dependencies_python_dependencies
   ]
 
 }
