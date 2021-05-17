@@ -12,7 +12,7 @@ resource "null_resource" "install_python_dependencies" {
     interpreter = ["powershell"]
   }
   triggers = {
-    always_run = "${timestamp()}"
+    always_run = timestamp()
   }
 }
 
