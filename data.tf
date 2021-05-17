@@ -37,8 +37,10 @@ data "aws_iam_policy_document" "ami_cleaner_lambda_policy_document" {
   statement {
     sid = "ValidateEC2Access"
     actions = [
-      "ec2:DescribeImages"
+      "ec2:DescribeImages",
+      "ec2:DeleteSnapshot",
+      "ec2:DeregisterImage"
     ]
-    resources = ["*"]
+    resources = ["arn:aws:ec2:${var.region}:${local.aws_account_id}:*"]
   }
 }
