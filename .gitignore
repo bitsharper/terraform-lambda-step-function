@@ -3,3 +3,4 @@ tmp/
 *.tfstate
 .backup
 .lock.hcl
+.tfstate.backup

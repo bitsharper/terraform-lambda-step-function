@@ -50,5 +50,3 @@ def delete_ami_snapshot(id: str):
 def get_ami_details(id: str):
     client = boto3.client('ec2')
     return client.describe_images(ImageIds=[id])['Images'][0]
-
-delete_ami_snapshot('snap-0001a70549f141216')
