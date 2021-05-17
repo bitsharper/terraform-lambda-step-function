@@ -4,7 +4,7 @@ data "archive_file" "zip" {
   output_path = "${path.module}/tmp/ami_cleaner.zip"
 
   depends_on = [
-    null_resource_python_dependencies
+    null_resource.install_python_dependencies
   ]
 
 }
