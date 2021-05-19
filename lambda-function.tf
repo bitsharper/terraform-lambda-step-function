@@ -20,7 +20,7 @@ resource "aws_lambda_function" "ami_cleaner_lambda" {
   runtime          = "python3.7"
   function_name    = "ami_cleaner"
   description      = "Lambda function for cleanering AMI and deleting snapshots"
-  timeout          = 5
+  timeout          = 30
   handler          = "ami_cleaner.lambda_handler"
   filename         = data.archive_file.zip.output_path
   source_code_hash = data.archive_file.zip.output_base64sha256
